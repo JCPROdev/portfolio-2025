@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Linkedin } from "lucide-react";
 import Image from "next/image";
 import ProfileImage from "@/images/profile_im.png";
+import { motion } from "motion/react";
 
 function HeroSection() {
   return (
@@ -18,24 +19,47 @@ function HeroSection() {
         <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
           {/* Text Content */}
           <div className="lg:w-1/2 text-left px-5 md:px-6">
-            <h1 className="text-white text-5xl font-bold mb-6">
-              Hola, soy{" "}
-              <span className="bg-linear-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-                Jomar
-              </span>
-            </h1>
-            <p className="text-indigo-500 text-xl mb-8 font-semibold">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-white text-5xl font-bold mb-6">
+                Hola, soy{" "}
+                <span className="bg-linear-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+                  Jomar
+                </span>
+              </h1>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-indigo-500 text-xl mb-8 font-semibold"
+            >
               Ingeniero de Sistemas{" "}
               <span className="text-white">especializado en</span> Desarrollo
               Frontend, Diseño UI/UX <span className="text-white">y</span>{" "}
               Aplicaciones Móviles
-            </p>
-            <p className="text-white text-lg font-semibold mb-10">
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-white text-lg font-semibold mb-10"
+            >
               Creo experiencias digitales excepcionales que combinan diseño
               atactivo con funcionalidad robusta
-            </p>
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-x-6">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-x-6"
+            >
               <Button
                 variant="outline"
                 size="lg"
@@ -62,12 +86,17 @@ function HeroSection() {
                   <Mail className="w-6 h-6" />
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Profile Image */}
           <div className="lg:w-1/2 flex justify-center">
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative"
+            >
               <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-indigo-400">
                 <Image
                   src={ProfileImage}
@@ -79,13 +108,21 @@ function HeroSection() {
               </div>
 
               {/* Floating eements around the image */}
-              <div className="absolute -top-4 -right-4 bg-indigo-700 w-14 h-14 rounded-full flex items-center justify-center">
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute -top-4 -right-4 bg-indigo-700 w-14 h-14 rounded-full flex items-center justify-center"
+              >
                 <span className="text-white font-bold text-lg">JS</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-purple-800 w-14 h-14 rounded-full flex items-center justify-center">
+              </motion.div>
+              <motion.div
+                animate={{ y: [10, -10, 10] }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+                className="absolute -bottom-4 -left-4 bg-purple-800 w-14 h-14 rounded-full flex items-center justify-center"
+              >
                 <span className="text-white font-bold text-lg">UI</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
