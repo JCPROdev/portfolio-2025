@@ -1,11 +1,4 @@
-import {
-  Code2,
-  Palette,
-  Smartphone,
-  Coffee,
-  Terminal,
-  FolderGit2,
-} from "lucide-react";
+import { Code2, Palette, Smartphone } from "lucide-react";
 
 export const PROFILE_DATA = {
   header: {
