@@ -53,22 +53,18 @@ export const PROFILE_DATA = {
     {
       label: "Proyectos Personales",
       value: "5+",
-      icon: FolderGit2,
     },
     {
       label: "Horas de Código",
       value: "800+",
-      icon: Terminal,
     },
     {
       label: "Tazas de Café",
       value: "∞",
-      icon: Coffee,
     },
     {
       label: "Ganas de Aprender",
       value: "100%",
-      icon: Code2,
     },
   ],
 };
