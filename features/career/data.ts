@@ -8,19 +8,19 @@ export const CAREER_DATA = {
     items: [
       // Frontend
       { name: "React", level: 95, category: "Frontend" },
-      { name: "Next.js", level: 85, category: "frontend" },
-      { name: "TypeScript", level: 80, category: "frontend" },
-      { name: "Tailwind CSS", level: 95, category: "frontend" },
+      { name: "Next.js", level: 85, category: "Frontend" },
+      { name: "TypeScript", level: 80, category: "Frontend" },
+      { name: "Tailwind CSS", level: 95, category: "Frontend" },
 
       // Backend
-      { name: "Node.js", level: 75, category: "backend" },
-      { name: "PostgreSQL", level: 70, category: "backend" },
+      { name: "Node.js", level: 75, category: "Backend" },
+      { name: "PostgreSQL", level: 70, category: "Backend" },
 
       // Design
-      { name: "Figma", level: 80, category: "design" },
+      { name: "Figma", level: 80, category: "Design" },
 
       // Tools
-      { name: "Git", level: 90, category: "tools" },
+      { name: "Git", level: 90, category: "Tools" },
     ],
   },
   experience: [
