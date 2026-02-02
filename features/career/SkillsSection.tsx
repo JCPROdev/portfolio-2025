@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const SkillsSection = () => {
-  const { skills, experience, education } = CAREER_DATA;
+  const { skills } = CAREER_DATA;
 
   // Obtener categorías únicas
   const uniqueCategories = [
@@ -96,7 +96,7 @@ const SkillsSection = () => {
 
         {/* Additional Info*/}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
+          <div className="bg-linear-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
             <h1 className="text-2xl font-bold mb-4">Siempre Aprendiendo</h1>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               La tecnología evoluciona constantemente, y yo también. Me mantengo

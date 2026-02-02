@@ -23,7 +23,7 @@ export const CAREER_DATA = {
       { name: "Git", level: 90, category: "Tools" },
     ],
   },
-  experience: [
+  experiences: [
     {
       id: "1",
       title: "Senior Frontend Developer",
