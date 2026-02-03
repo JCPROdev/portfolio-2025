@@ -1,10 +1,36 @@
 "use client";
 
+import { motion } from "motion/react";
+import { useInView } from "react-intersection-observer";
 import { Briefcase, Building2, Calendar, MapPin } from "lucide-react";
 import { CAREER_DATA } from "./data";
 
 const ExperienceSection = () => {
   const { experiences } = CAREER_DATA;
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6 },
+    },
+  };
 
   const formatDate = (dateStr: string) => {
     const [year, month] = dateStr.split("-");
@@ -26,9 +52,14 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-gray-50">
+    <section id="experience" className="py-20 bg-gray-50" ref={ref}>
       <div className="mx-auto px-5 max-w-6xl sm:px-6">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h1 className="text-4xl font-bold mb-4 text-gray-900">
             Experiencia <span className="text-indigo-600">Profesional</span>
           </h1>
@@ -36,14 +67,20 @@ const ExperienceSection = () => {
             Mi trayectoria profesional construyendo soluciones digitales
             innovadoras
           </p>
-        </div>
+        </motion.div>
 
-        <div className="relative">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="relative"
+        >
           {/* Timeline Line */}
           <div className="absolute left-8 top-0 bottom-0 w-px bg-indigo-200 hidden md:block"></div>
           {experiences.map((experience) => (
-            <div
+            <motion.div
               key={experience.id}
+              variants={itemVariants}
               className="relative mb-12 md:mb-16 md:ml-16"
             >
               {/* Timeline Dot*/}
@@ -102,12 +139,17 @@ const ExperienceSection = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-16"
+        >
           <div className="p-8 bg-linear-to-r from-indigo-600 to-purple-600 rounded-lg text-white">
             <h3 className="font-bold text-2xl mb-4">
               ¿Interesado en mi experiencia?
@@ -120,7 +162,7 @@ const ExperienceSection = () => {
               Contactar Ahora
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
