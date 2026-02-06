@@ -7,21 +7,20 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 
-import proy1 from "@/images/image1.png";
-
 interface ProjectCardProps {
   project: Project;
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  if (!project) return null;
   return (
-    <Card className="overflow-hidden h-full">
+    <Card className="overflow-hidden h-full py-0 border-gray-200">
       <div className="relative aspect-video bg-gray-200 overflow-hidden">
         <Image
-          src={project?.image ?? proy1}
-          alt={project?.title ?? "Project image"}
+          src={project.image}
+          alt={project.title}
           fill
+          // Como optimizar el tamaño:
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -42,12 +41,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         </div>
 
-        <div className="absolute top-4 left-4">
+        {/* <div className="absolute top-4 left-4">
           <Badge className="bg-indigo-700 text-white">Destacado</Badge>
-        </div>
+        </div> */}
 
         <div className="absolute top-4 right-4">
-          <Badge variant={"secondary"}>{project.category}</Badge>
+          <Badge className="bg-indigo-700 text-white">{project.category}</Badge>
         </div>
       </div>
 
@@ -60,15 +59,15 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </p>
 
         <div className="flex flex-wrap gap-2">
-          <Badge variant="outline" className="text-sm">
-            Next.js
-          </Badge>
-          <Badge variant="outline" className="text-sm">
-            React
-          </Badge>
-          <Badge variant="outline" className="text-sm">
-            Tailwind CSS
-          </Badge>
+          {project.tags.map((tag) => (
+            <Badge
+              key={tag}
+              variant="outline"
+              className="text-sm text-gray-600 border-gray-300 font-semibold"
+            >
+              {tag}
+            </Badge>
+          ))}
         </div>
       </CardContent>
     </Card>

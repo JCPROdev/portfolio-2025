@@ -25,7 +25,7 @@ export const PROJECTS_DATA: Project[] = [
     title: "GymPro Management Platform",
     description:
       "Plataforma web completa para gestión de gimnasios con dashboard administrativo y análisis de rendimiento.",
-    image: "/images/project-1.jpg",
+    image: "/images/image1.png",
     tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     category: "frontend",
     links: { demo: "#", github: "#" },
@@ -35,7 +35,7 @@ export const PROJECTS_DATA: Project[] = [
     title: "FoodDelivery Mobile App",
     description:
       "Aplicación móvil para delivery de comida con navegación intuitiva y seguimiento en tiempo real.",
-    image: "/images/project-2.jpg",
+    image: "/images/image1.png",
     tags: ["React Native", "Expo", "TypeScript"],
     category: "mobile",
     links: { demo: "#", github: "#" },
@@ -45,7 +45,7 @@ export const PROJECTS_DATA: Project[] = [
     title: "UI/UX Design System",
     description:
       "Sistema completo de diseño con componentes reutilizables y guías de estilo modernas.",
-    image: "/images/project-3.jpg",
+    image: "/images/image1.png",
     tags: ["Figma", "Storybook", "CSS Modules"],
     category: "ui-ux",
     links: { demo: "#" },
@@ -55,7 +55,7 @@ export const PROJECTS_DATA: Project[] = [
     title: "Developer Portfolio",
     description:
       "Portfolio interactivo con animaciones avanzadas y optimización SEO.",
-    image: "/images/project-4.jpg",
+    image: "/images/image1.png",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
     category: "frontend",
     links: { github: "#" },
