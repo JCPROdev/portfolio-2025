@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin } from "lucide-react";
 import Image from "next/image";
-import ProfileImage from "@/images/profile_im.png";
+import ProfileImage from "@/public/images/profile_im.png";
 import { motion } from "motion/react";
 
 function HeroSection() {
@@ -102,6 +102,8 @@ function HeroSection() {
                   src={ProfileImage}
                   alt="Jomar Camacho - Profile"
                   fill
+                  // Esta línea le dice a Next.js cómo optimizar el tamaño:
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                   priority
                 />
