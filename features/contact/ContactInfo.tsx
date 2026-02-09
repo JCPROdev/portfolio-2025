@@ -3,8 +3,8 @@ import { Check, Linkedin, Mail, MapPin } from "lucide-react";
 
 const ContactInfo = () => {
   return (
-    <div className="space-y-8">
-      <Card>
+    <div className="space-y-8 min-w-0">
+      <Card className="border-gray-200">
         <CardHeader>
           <CardTitle className="flex items-center text-xl font-semibold">
             Información de contacto
@@ -39,7 +39,7 @@ const ContactInfo = () => {
             </div>
           </div>
 
-          <div className="pt-6 border-t">
+          <div className="pt-6 border-t border-gray-200">
             <h2 className="font-semibold mb-4">Sígueme</h2>
 
             <div className="flex space-x-4">
@@ -62,7 +62,7 @@ const ContactInfo = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-linear-to-br from-indigo-50 to-purple-50">
+      <Card className="bg-linear-to-br from-indigo-50 to-purple-50 border-gray-200">
         <CardContent className="p-6">
           <h2 className="text-xl font-bold mb-4">¿Por que trabajar conmigo?</h2>
           <ul className="space-y-3 text-gray-700">

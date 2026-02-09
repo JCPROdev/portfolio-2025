@@ -6,8 +6,8 @@ import { Send } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <div>
-      <Card>
+    <div className="min-w-0">
+      <Card className="border-gray-200">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
             Envíame un Mensaje
@@ -29,7 +29,7 @@ const ContactForm = () => {
                     id="name"
                     type="text"
                     placeholder="Tu nombre"
-                    className="pl-4 bg-white"
+                    className="pl-4 bg-white border-gray-300 focus-visible:ring-indigo-500"
                   />
                 </div>
               </div>
@@ -46,7 +46,7 @@ const ContactForm = () => {
                     id="email"
                     type="email"
                     placeholder="tu@email.com"
-                    className="pl-4 bg-white"
+                    className="pl-4 bg-white border-gray-300 focus-visible:ring-indigo-500"
                   />
                 </div>
               </div>
@@ -63,7 +63,7 @@ const ContactForm = () => {
                 id="subject"
                 type="text"
                 placeholder="¿De qué quieres hablar?"
-                className="bg-white"
+                className="bg-white border-gray-300 focus-visible:ring-indigo-500"
               />
             </div>
 
@@ -78,7 +78,7 @@ const ContactForm = () => {
                 id="message"
                 rows={5}
                 placeholder="Cuéntame sobre tu proyecto, necesidades, timeline, etc..."
-                className="bg-white"
+                className="bg-white border-gray-300 focus-visible:ring-indigo-500"
               />
             </div>
 
