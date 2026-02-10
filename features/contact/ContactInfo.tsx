@@ -1,10 +1,21 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Linkedin, Mail, MapPin } from "lucide-react";
 
+import { motion } from "motion/react";
+
 const ContactInfo = () => {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
   return (
-    <div className="space-y-8 min-w-0">
-      <Card className="border-gray-200">
+    <motion.div variants={itemVariants} className="space-y-8 min-w-0">
+      <Card className="border-gray-200 hover:scale-105 transition-transform duration-300">
         <CardHeader>
           <CardTitle className="flex items-center text-xl font-semibold">
             Información de contacto
@@ -62,7 +73,7 @@ const ContactInfo = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-linear-to-br from-indigo-50 to-purple-50 border-gray-200">
+      <Card className="bg-linear-to-br from-indigo-50 to-purple-50 border-gray-200 hover:scale-105 transition-transform duration-300">
         <CardContent className="p-6">
           <h2 className="text-xl font-bold mb-4">¿Por que trabajar conmigo?</h2>
           <ul className="space-y-3 text-gray-700">
@@ -89,7 +100,7 @@ const ContactInfo = () => {
           </ul>
         </CardContent>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 

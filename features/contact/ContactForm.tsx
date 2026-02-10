@@ -12,8 +12,18 @@ import { useForm } from "react-hook-form";
 import { ContactFormData, contactFormSchema } from "./schemas";
 import { toast } from "sonner";
 import { sendEmail } from "./actions";
+import { motion } from "motion/react";
 
 const ContactForm = () => {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
   const {
     register,
     handleSubmit,
@@ -35,8 +45,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-w-0">
-      <Card className="border-gray-200">
+    <motion.div variants={itemVariants} className="min-w-0">
+      <Card className="border-gray-200 hover:scale-105 transition-transform duration-300">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
             Envíame un Mensaje
@@ -184,7 +194,7 @@ const ContactForm = () => {
           </form>
         </CardContent>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 
