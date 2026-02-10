@@ -18,7 +18,7 @@ export async function sendEmail(data: ContactFormData) {
     // Enviamos el correo
     const { error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: "camacho.jomar28@outlook.com",
+      to: "djjomar28@gmail.com",
       subject: `Nuevo mensaje de: ${data.name} - ${data.subject}`,
       text: `Email: ${data.email}\n\nMensaje:\n${data.message}`,
     });

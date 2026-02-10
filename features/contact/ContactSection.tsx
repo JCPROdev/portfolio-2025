@@ -3,9 +3,12 @@
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 
+import { Toaster } from "sonner";
+
 const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-white">
+      <Toaster position="bottom-right" />
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
