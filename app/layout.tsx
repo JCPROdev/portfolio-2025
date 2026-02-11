@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage",
@@ -26,6 +28,11 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+
+      {/* Carga Google Analytics solo si se ha proporcionado un ID de seguimiento */}
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ? (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+      ) : null}
     </html>
   );
 }
