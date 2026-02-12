@@ -39,28 +39,32 @@ Si quieres clonar y ejecutar este proyecto en tu máquina local, sigue estos pas
 
 Instalar dependencias:
 
-Bash
+```Bash
 pnpm install
 
 # o
 
 npm install
+```
 
 Configurar Variables de Entorno: Renombra o crea el archivo .env.local y añade tus claves:
 
-Plaintext
+```text
 RESEND_API_KEY=re_12345...
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXX
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
 
 Ejecutar servidor de desarrollo:
 
-Bash
+```Bash
 pnpm dev
 Abre http://localhost:3000 en tu navegador.
+```
 
 📂 Estructura del Proyecto
-Plaintext
+
+```text
 ├── src/
 │ ├── app/ # App Router (Layout)
 │ ├── components/ # Componentes React reutilizables (Páginas y UI)
@@ -68,6 +72,7 @@ Plaintext
 │ └── features/contact # Utilidades (Zod schemas, Server actions)
 ├── public/ # Assets estáticos (Imágenes, fuentes)
 └── ...config files # Tailwind, Next.js, TypeScript config
+```
 
 🤝 Contacto
 ¿Te interesa mi perfil o quieres colaborar?
