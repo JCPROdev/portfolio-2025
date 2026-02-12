@@ -32,12 +32,13 @@ Este proyecto no es solo una cara bonita; está construido sobre una arquitectur
 Si quieres clonar y ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 1. **Clonar el repositorio:**
+
    ```bash
    git clone [https://github.com/JCPROdev/portfolio-2025.git]
    cd portfolio-2025
    ```
 
-Instalar dependencias:
+2. **Instalar dependencias:**
 
 ```Bash
 pnpm install
@@ -47,7 +48,7 @@ pnpm install
 npm install
 ```
 
-Configurar Variables de Entorno: Renombra o crea el archivo .env.local y añade tus claves:
+3. **Configurar Variables de Entorno: Renombra o crea el archivo .env.local y añade tus claves:**
 
 ```text
 RESEND_API_KEY=re_12345...
@@ -55,12 +56,13 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXX
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
-Ejecutar servidor de desarrollo:
+4. **Ejecutar servidor de desarrollo:**
 
 ```Bash
 pnpm dev
-Abre http://localhost:3000 en tu navegador.
 ```
+
+Abre http://localhost:3000 en tu navegador.
 
 📂 Estructura del Proyecto
 
