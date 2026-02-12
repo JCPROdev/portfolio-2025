@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Jomar Camacho | Frontend Developer, UX/UI Designer
 
-## Getting Started
+![Project Banner](public/og-image.jpg)
 
-First, run the development server:
+> Portafolio profesional de alto rendimiento desarrollado con las últimas tecnologías del ecosistema React. Enfocado en performance, accesibilidad y SEO técnico.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/portfolio-jomar)](https://portfolio-jomar.vercel.app/)
+
+## 🛠 Tech Stack
+
+Este proyecto no es solo una cara bonita; está construido sobre una arquitectura robusta y moderna:
+
+- **Core:** [Next.js 15](https://nextjs.org/) (App Router & Server Components)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) (Tipado estricto)
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) + [Shadcn/UI](https://ui.shadcn.com/)
+- **Animaciones:** [Motion](https://motion.dev/)
+- **Formularios & Validación:** [React Server Actions](https://react.dev/reference/react/use-server) + [Zod](https://zod.dev/)
+- **Email:** [Resend API](https://resend.com/) (Envío transaccional real)
+- **Analytics:** Google Analytics 4 (GA4)
+- **Despliegue:** Vercel (CI/CD)
+
+## 🚀 Características Clave
+
+- ✅ **Performance 100/100:** Optimización de Core Web Vitals (Lighthouse).
+- ✅ **Server Actions:** Manejo de formularios sin API Routes tradicionales (Backend-for-Frontend).
+- ✅ **SEO Optimizado:** Metadatos dinámicos, sitemap.xml, robots.txt y Open Graph.
+- ✅ **Diseño Responsivo:** Adaptable a Móvil, Tablet y Desktop con enfoque "Mobile First".
+- ✅ **Seguridad:** Validación de inputs con Zod en servidor y cliente.
+
+## 📦 Instalación y Uso Local
+
+Si quieres clonar y ejecutar este proyecto en tu máquina local, sigue estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/JCPROdev/portfolio-2025.git
+   cd portfolio-2025
+   Instalar dependencias:
+   ```
+
+Bash
+pnpm install
+
+# o
+
+npm install
+Configurar Variables de Entorno: Renombra o crea el archivo .env.local y añade tus claves:
+
+Fragmento de código
+RESEND_API_KEY=re_12345...
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXX
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+Ejecutar servidor de desarrollo:
+
+Bash
 pnpm dev
-# or
-bun dev
-```
+Abre http://localhost:3000 en tu navegador.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📂 Estructura del Proyecto
+Bash
+├── src/
+│ ├── app/ # App Router (Layout)
+│ ├── components/ # Componentes React reutilizables (Páginas y UI)  
+│ └── features/contact/ # Utilidades (Zod schemas, utils)
+│ # Server Actions (Lógica de servidor)
+│
+├── public/ # Assets estáticos (Imágenes, fuentes)
+└── ...config files # Tailwind, Next.js, TypeScript config
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🤝 Contacto
+¿Te interesa mi perfil o quieres colaborar?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Website: https://portfolio-jomar.vercel.app/
 
-## Learn More
+LinkedIn: [https://www.linkedin.com/in/jomar-camacho/]
 
-To learn more about Next.js, take a look at the following resources:
+Email: [camacho.jomar28@outlook.com]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desarrollado por Jomar Camacho.
