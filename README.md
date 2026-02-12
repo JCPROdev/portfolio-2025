@@ -33,10 +33,11 @@ Si quieres clonar y ejecutar este proyecto en tu máquina local, sigue estos pas
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/JCPROdev/portfolio-2025.git
+   git clone [https://github.com/JCPROdev/portfolio-2025.git]
    cd portfolio-2025
-   Instalar dependencias:
    ```
+
+Instalar dependencias:
 
 Bash
 pnpm install
@@ -44,12 +45,14 @@ pnpm install
 # o
 
 npm install
+
 Configurar Variables de Entorno: Renombra o crea el archivo .env.local y añade tus claves:
 
-Fragmento de código
+Plaintext
 RESEND_API_KEY=re_12345...
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXX
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
 Ejecutar servidor de desarrollo:
 
 Bash
@@ -57,13 +60,12 @@ pnpm dev
 Abre http://localhost:3000 en tu navegador.
 
 📂 Estructura del Proyecto
-Bash
+Plaintext
 ├── src/
 │ ├── app/ # App Router (Layout)
-│ ├── components/ # Componentes React reutilizables (Páginas y UI)  
-│ └── features/contact/ # Utilidades (Zod schemas, utils)
-│ # Server Actions (Lógica de servidor)
-│
+│ ├── components/ # Componentes React reutilizables (Páginas y UI)
+│ ├── features/ # Módulos específicos (ej: contact)
+│ └── features/contact # Utilidades (Zod schemas, Server actions)
 ├── public/ # Assets estáticos (Imágenes, fuentes)
 └── ...config files # Tailwind, Next.js, TypeScript config
 
@@ -72,8 +74,8 @@ Bash
 
 Website: https://portfolio-jomar.vercel.app/
 
-LinkedIn: [https://www.linkedin.com/in/jomar-camacho/]
+LinkedIn: https://www.linkedin.com/in/jomar-camacho/
 
-Email: [camacho.jomar28@outlook.com]
+Email: camacho.jomar28@outlook.com
 
 Desarrollado por Jomar Camacho.
