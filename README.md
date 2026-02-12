@@ -1,6 +1,6 @@
 # ⚡ Jomar Camacho | Frontend Developer, UX/UI Designer
 
-![Project Banner](public/og-image.jpg)
+![Project Banner](public/og-image.png)
 
 > Portafolio profesional de alto rendimiento desarrollado con las últimas tecnologías del ecosistema React. Enfocado en performance, accesibilidad y SEO técnico.
 
@@ -33,10 +33,10 @@ Si quieres clonar y ejecutar este proyecto en tu máquina local, sigue estos pas
 
 1. **Clonar el repositorio:**
 
-   ```bash
-   git clone [https://github.com/JCPROdev/portfolio-2025.git]
-   cd portfolio-2025
-   ```
+```bash
+git clone [https://github.com/JCPROdev/portfolio-2025.git]
+cd portfolio-2025
+```
 
 2. **Instalar dependencias:**
 
