@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navigationItems = [
     { name: "Inicio", href: "#hero" },
@@ -17,10 +27,26 @@ function Navbar() {
     { name: "Contacto", href: "#contact" },
   ];
 
+  const scrollToSection = (href: string) => {
+    const selector = href.startsWith("#") ? href : `#${href}`;
+
+    // Cerramos el menu mobile primero así el overlay no bloquea el scrolling en mobile
+    setIsMenuOpen(false);
+
+    setTimeout(() => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     // Mobile First Navbar
     <motion.header
-      className="bg-transparent fixed top-0 left-0 right-0 z-50"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "glass-dark backdrop-blur-md" : "bg-transparent"
+      }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
@@ -40,6 +66,7 @@ function Navbar() {
               {navigationItems.map((item) => (
                 <button
                   key={item.name}
+                  onClick={() => scrollToSection(item.href)}
                   className="text-gray-300 hover:text-white px-3 md:px-0 lg:px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                 >
                   {item.name}
@@ -92,6 +119,8 @@ function Navbar() {
               {navigationItems.map((item, index) => (
                 <motion.button
                   key={item.name}
+                  type="button"
+                  onClick={() => scrollToSection(item.href)}
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left cursor-pointer"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
