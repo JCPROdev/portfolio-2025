@@ -70,7 +70,7 @@ const EducationSection = () => {
               <motion.div
                 key={edu.id}
                 variants={itemVariants}
-                className="p-6 bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg"
+                className="p-6 bg-linear-to-r from-indigo-50 to-blue-50 rounded-lg mb-4"
               >
                 <div className="flex flex-col mb-4 md:flex-row md:items-center md:justify-between">
                   <div>
@@ -155,25 +155,26 @@ const EducationSection = () => {
         >
           <div className="bg-linear-to-r from-purple-600 to-indigo-600 rounded-lg p-8 text-white">
             <h3 className="font-bold text-2xl mb-4">
-              Compromiso con el aprendizaje
+              Aprendizaje Continuo & Evolución
             </h3>
             <p className="max-w-3xl mx-auto mb-6">
-              En el mundo de la tecnología, el aprendizaje nunca se detiene. Me
-              mantengo actualizado con las últimas tendencias, asisto a
-              conferencias, y contribuyo a la comunidad de desarrolladores.
+              Me enfoco en perfeccionar mis habilidades a través de cursos
+              especializados y la investigación constante, incorporando
+              estándares modernos de UX/UI y arquitectura de software en cada
+              nuevo desafío.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-                Cursos Online
+                Autoformación
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-                Conferencias Tech
+                Mejores Prácticas
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-                Open Source
+                Proyectos Personales
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full text-sm">
-                Comunidades Dev
+                Nuevas Tecnologías
               </span>
             </div>
           </div>
