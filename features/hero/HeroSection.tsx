@@ -24,7 +24,7 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-white text-5xl font-bold mb-6">
+              <h1 className="text-white text-5xl lg:text-7xl font-bold mb-6">
                 Hola, soy{" "}
                 <span className="bg-linear-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
                   Jomar
@@ -36,22 +36,22 @@ function HeroSection() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-indigo-500 text-xl mb-8 font-semibold"
+              className="text-indigo-500 mb-8 font-semibold text-xl lg:text-2xl"
             >
               Ingeniero de Sistemas{" "}
-              <span className="text-white">especializado en</span> Desarrollo
-              Frontend, Diseño UI/UX <span className="text-white">y</span>{" "}
-              Aplicaciones Móviles
+              <span className="text-white"> enfocado en </span> Desarrollo
+              Frontend <span className="text-white">y </span> Arquitectura de
+              Información
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-white text-lg font-semibold mb-10"
+              className="text-gray-400 text-lg font-semibold mb-10 max-w-lg"
             >
-              Creo experiencias digitales excepcionales que combinan diseño
-              atactivo con funcionalidad robusta
+              Creo interfaces web modernas y escalables, combinando la lógica de
+              la ingeniería con la creatividad del diseño UI/UX.
             </motion.p>
 
             <motion.div
