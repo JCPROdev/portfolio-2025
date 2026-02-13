@@ -64,8 +64,8 @@ const ExperienceSection = () => {
             Experiencia <span className="text-indigo-600">Profesional</span>
           </h1>
           <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-            Mi trayectoria profesional construyendo soluciones digitales
-            innovadoras
+            Mi trayectoria profesional gestionando seguridad de redes y
+            construyendo soluciones digitales innovadoras
           </p>
         </motion.div>
 
