@@ -156,9 +156,15 @@ const ExperienceSection = () => {
             </h3>
             <p className="mb-6 max-w-2xl mx-auto">
               Estoy siempre abierto a nuevos desafíos y oportunidades. ¡Hablemos
-              sobre cómo puedo contribuir a tu próximo proyecto!
+              sobre cómo puedo contribuir a tu equipo o próximo proyecto!
             </p>
-            <button className="px-8 py-3 bg-white text-indigo-600 rounded-full font-bold">
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                contactSection?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-8 py-3 bg-white text-indigo-600 rounded-full font-bold hover:cursor-pointer"
+            >
               Contactar Ahora
             </button>
           </div>

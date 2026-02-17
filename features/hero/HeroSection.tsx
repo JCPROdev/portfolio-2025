@@ -63,7 +63,11 @@ function HeroSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-indigo-500 hover:bg-indigo-700 text-white px-8 py-4 text-lg sm:mb-0"
+                onClick={() => {
+                  const contactSection = document.getElementById("portfolio");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="border-indigo-500 hover:bg-indigo-700 text-white px-8 py-4 text-lg sm:mb-0 hover:cursor-pointer"
               >
                 Ver mi trabajo
               </Button>

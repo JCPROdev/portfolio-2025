@@ -185,7 +185,7 @@ const ContactForm = () => {
                   Enviando...
                 </div>
               ) : (
-                <div className="flex items-center">
+                <div className="flex items-center hover:cursor-pointer">
                   <Send className="w-4 h-4 mr-2" />
                   Enviar Mensaje
                 </div>

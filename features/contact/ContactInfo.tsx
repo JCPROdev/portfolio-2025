@@ -55,14 +55,14 @@ const ContactInfo = () => {
 
             <div className="flex space-x-4">
               <a
-                href=""
+                href="https://linkedin.com/in/jomar-camacho/"
                 className="bg-indigo-600 p-3 rounded-lg text-white hover:bg-indigo-700 transition-colors"
                 aria-label="Linkedin"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href=""
+                href="mailto:camacho.jomar28@outlook.com"
                 className="bg-gray-600 p-3 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 {" "}
@@ -75,27 +75,27 @@ const ContactInfo = () => {
 
       <Card className="bg-linear-to-br from-indigo-50 to-purple-50 border-gray-200 hover:scale-105 transition-transform duration-300">
         <CardContent className="p-6">
-          <h2 className="text-xl font-bold mb-4">¿Por que trabajar conmigo?</h2>
+          <h2 className="text-xl font-bold mb-4">¿Qué aporto al equipo?</h2>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
               {" "}
               <Check className="w-5 h-5 text-green-500 mt-0.5 shrink-0 mr-2" />
-              Respuesta rápida (menos de 24 horas)
+              Traducción fiel de diseños (Figma) a código funcional
             </li>
             <li className="flex items-start">
               {" "}
               <Check className="w-5 h-5 text-green-500 mt-0.5 shrink-0 mr-2" />{" "}
-              Comunicación clara y constante
+              Enfoque lógico y estructurado de ingeniería
             </li>
             <li className="flex items-start">
               {" "}
               <Check className="w-5 h-5 text-green-500 mt-0.5 shrink-0 mr-2" />
-              Código limpio y bien documentado
+              Adaptabilidad rápida a nuevos stacks tecnológicos
             </li>
             <li className="flex items-start">
               {" "}
               <Check className="w-5 h-5 text-green-500 mt-0.5 shrink-0 mr-2" />{" "}
-              Soporte post-entrega incluido
+              Atención al detalle visual y experiencia de usuario
             </li>
           </ul>
         </CardContent>
