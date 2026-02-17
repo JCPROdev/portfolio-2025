@@ -120,7 +120,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-linear-to-r from-indigo-50 to-purple-50 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold mb-4">
               ¿Te interesa mi trabajo?
             </h3>

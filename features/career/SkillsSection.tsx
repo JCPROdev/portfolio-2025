@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 import { CAREER_DATA } from "./data";
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
 
 const SkillsSection = () => {
   const { skills } = CAREER_DATA;
@@ -75,7 +74,7 @@ const SkillsSection = () => {
               key={category}
               onClick={() => setActiveCategory(category)}
               type="button"
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category ? "bg-indigo-600 text-white shadow-lg" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
+              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:cursor-pointer ${activeCategory === category ? "bg-indigo-600 text-white shadow-lg" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
             >
               {category}
             </button>
@@ -150,29 +149,6 @@ const SkillsSection = () => {
                   </div>
                 </motion.div>
               ))}
-          </div>
-        </motion.div>
-
-        {/* Additional Info*/}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-linear-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
-            <h1 className="text-2xl font-bold mb-4">Siempre Aprendiendo</h1>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              La tecnología evoluciona constantemente, y yo también. Me mantengo
-              actualizado con las últimas tendencias y mejores prácticas del
-              desarrollo web y móvil.
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              <Badge className="bg-gray-200">Aprendizaje Continuo</Badge>
-              <Badge className="bg-gray-200">Mejores Prácticas</Badge>
-              <Badge className="bg-gray-200">Clean Code</Badge>
-              <Badge className="bg-gray-200">Performance</Badge>
-            </div>
           </div>
         </motion.div>
       </div>
