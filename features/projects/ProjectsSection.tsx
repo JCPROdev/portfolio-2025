@@ -131,11 +131,25 @@ const ProjectsSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size={"lg"} className="bg-indigo-600 text-white">
-                Empezar Proyecto
+              <Button
+                size={"lg"}
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  contactSection?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="bg-indigo-600 text-white hover:cursor-pointer"
+              >
+                Hablemos
               </Button>
-              <Button variant={"outline"} size={"lg"}>
-                Ver más trabajos
+              <Button
+                variant={"outline"}
+                size={"lg"}
+                onClick={() =>
+                  window.open("https://github.com/JCPROdev", "_blank")
+                }
+                className="hover:cursor-pointer"
+              >
+                Ver Github
               </Button>
             </div>
           </div>

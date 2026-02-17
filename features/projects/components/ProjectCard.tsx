@@ -25,15 +25,21 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         />
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div className="flex space-x-4">
-            <Button size="sm" className="bg-white hover:bg-gray-100">
+            <Button
+              size="sm"
+              onClick={() => window.open(project.links.demo, "_blank")}
+              className="bg-white hover:bg-gray-100 hover:cursor-pointer"
+            >
               <ExternalLink className="w-4 h-4" />
-              Ver Demo
+              Ver Web
             </Button>
 
             <Button
               size="sm"
               variant="outline"
-              className="bg-transparent border-white hover:bg-white hover:text-gray-900"
+              onClick={() => window.open(project.links.github, "_blank")}
+              className="bg-transparent border-white hover:bg-white hover:text-gray-900 hover:cursor-pointer"
+              disabled={!project.links.github || project.links.github === "#"}
             >
               <Github className="w-4 h-4 mr-2" />
               Código
