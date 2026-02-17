@@ -20,10 +20,10 @@ function Navbar() {
 
   const navigationItems = [
     { name: "Inicio", href: "#hero" },
-    { name: "Sobre Mí", href: "#about" },
+    { name: "Portafolio", href: "#portfolio" },
     { name: "Habilidades", href: "#skills" },
     { name: "Experiencia", href: "#experience" },
-    { name: "Portafolio", href: "#portfolio" },
+    { name: "Sobre Mí", href: "#about" },
     { name: "Contacto", href: "#contact" },
   ];
 
