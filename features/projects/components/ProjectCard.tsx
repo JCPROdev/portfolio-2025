@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               size="sm"
               variant="outline"
               onClick={() => window.open(project.links.github, "_blank")}
-              className="bg-transparent border-white hover:bg-white hover:text-gray-900 hover:cursor-pointer"
+              className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900 hover:cursor-pointer"
               disabled={!project.links.github || project.links.github === "#"}
             >
               <Github className="w-4 h-4 mr-2" />

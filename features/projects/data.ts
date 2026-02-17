@@ -30,16 +30,19 @@ export const PROJECTS_DATA: Project[] = [
     category: "frontend",
     links: { demo: "https://levelgym-cbba.web.app", github: "#" },
   },
-  // {
-  //   id: "2",
-  //   title: "FoodDelivery Mobile App",
-  //   description:
-  //     "Aplicación móvil para delivery de comida con navegación intuitiva y seguimiento en tiempo real.",
-  //   image: "/images/image1.png",
-  //   tags: ["React Native", "Expo", "TypeScript"],
-  //   category: "mobile",
-  //   links: { demo: "#", github: "#" },
-  // },
+  {
+    id: "2",
+    title: "Personal Brand Portfolio & Identity",
+    description:
+      "Diseño y construcción de mi identidad digital. Traduje mi prototipo de Figma a una aplicación web real con Next.js, enfocándome en la creación de componentes reutilizables, un diseño totalmente responsivo y la aplicación de buenas prácticas de código limpio.",
+    image: "/images/p2_per_portfolio.webp",
+    tags: ["React", "Next.js", "TypeScript", "Figma", "Tailwind CSS"],
+    category: "frontend",
+    links: {
+      demo: "https://www.figma.com/design/46SrohqEx8WOn4MuUXOMaV/Portfolio---Web-Design?node-id=366-21&t=O9lDIMjqWWIMPNPc-1",
+      github: "https://github.com/JCPROdev/portfolio-2025",
+    },
+  },
   // {
   //   id: "3",
   //   title: "UI/UX Design System",
